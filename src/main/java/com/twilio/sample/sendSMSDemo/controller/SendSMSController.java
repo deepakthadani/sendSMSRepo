@@ -42,8 +42,11 @@ public class SendSMSController {
     	 System.out.println("SID: " + messageSid + ", Status:" + messageStatus);
          //create a send SMS object   
      	 SMSPojo sMSPojo = new SMSPojo();
-     	sMSPojo.setSid(messageSid);
-     	sMSPojo.setDeliveryStatus(messageStatus);
+     	 sMSPojo.setSid(messageSid);
+     	 sMSPojo.setDeliveryStatus(messageStatus);
+     	 
+     	 //Should ideally save the response from twilio into the database. However in this case just having it displayed on a web page.
+     	 
          //provide sendSMSPojo object to the model   
      	 model.addAttribute("SMSPojo", sMSPojo);  
      	 return "listSmsStatus"; 
